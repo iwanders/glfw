@@ -570,11 +570,14 @@ static GLFWbool createNativeWindow(_GLFWwindow* window,
     int width = wndconfig->width;
     int height = wndconfig->height;
 
+    printf("width: %d, height: %d\n", width, height);
     if (wndconfig->scaleToMonitor)
     {
         width *= _glfw.x11.contentScaleX;
         height *= _glfw.x11.contentScaleY;
     }
+    printf("_glfw.x11.contentScaleX: %f, _glfw.x11.contentScaleY: %f\n", _glfw.x11.contentScaleX, _glfw.x11.contentScaleY);
+    printf("width: %d, height: %d\n", width, height);
 
     int xpos = 0, ypos = 0;
 
